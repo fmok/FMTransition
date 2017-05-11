@@ -82,6 +82,15 @@
 
 @implementation FMPanModalTransition
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.mPercentDrivenInteractiveTransition = [[FMPercentDrivenInteractiveTransition alloc] init];
+    }
+    return self;
+}
+
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {

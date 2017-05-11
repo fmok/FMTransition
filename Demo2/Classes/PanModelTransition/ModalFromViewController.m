@@ -36,6 +36,8 @@
     ModalToViewController *vc = [[ModalToViewController alloc] init];
     self.transition = [[FMPanModalTransition alloc] init];
     vc.transitioningDelegate = self.transition;
+    self.transition.mPercentDrivenInteractiveTransition = [[FMPercentDrivenInteractiveTransition alloc] init];
+    [self.transition.mPercentDrivenInteractiveTransition wireToViewController:vc];
     [self presentViewController:vc animated:YES completion:nil];
 }
 

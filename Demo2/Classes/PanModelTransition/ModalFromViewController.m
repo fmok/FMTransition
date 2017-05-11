@@ -18,6 +18,11 @@
 
 @implementation ModalFromViewController
 
+- (void)dealloc
+{
+    NSLog(@"\n*** present VC dealloc ***\n");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,10 +39,7 @@
 - (void)presentAction:(UIButton *)sender
 {
     ModalToViewController *vc = [[ModalToViewController alloc] init];
-    self.transition = [[FMPanModalTransition alloc] init];
-    vc.transitioningDelegate = self.transition;
-    [self.transition.mPercentDrivenInteractiveTransition wireToViewController:vc];
-    [self presentViewController:vc animated:YES completion:nil];
+    [self.transition presentModalViewControllerWithFromVC:self andToVC:vc animated:YES completion:nil];
 }
 
 #pragma mark - getter & setter
@@ -51,6 +53,40 @@
         [_presentBtn addTarget:self action:@selector(presentAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _presentBtn;
+}
+
+- (FMPanModalTransition *)transition
+{
+    if (!_transition) {
+        _transition = [FMPanModalTransition new];
+    }
+    return _transition;
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
 }
 
 - (void)didReceiveMemoryWarning {

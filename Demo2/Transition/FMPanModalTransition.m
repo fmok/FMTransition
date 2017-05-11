@@ -91,6 +91,20 @@
     return self;
 }
 
+#pragma mark - Public methods
+- (void)presentModalViewControllerWithFromVC:(UIViewController * _Nullable)fromVC andToVC:(UIViewController * _Nullable)toVC animated:(BOOL)animated completion:(void (^ __nullable)(void))completion
+{
+    toVC.transitioningDelegate = self;
+    [self.mPercentDrivenInteractiveTransition wireToViewController:toVC];
+    [fromVC presentViewController:toVC animated:animated completion:completion];
+}
+
+- (void)dismissViewController:(UIViewController * _Nullable)objVC animated: (BOOL)flag completion: (void (^ __nullable)(void))completion
+{
+    objVC.transitioningDelegate = self;
+    [objVC dismissViewControllerAnimated:flag completion:completion];
+}
+
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {

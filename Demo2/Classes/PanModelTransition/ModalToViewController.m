@@ -17,6 +17,11 @@
 
 @implementation ModalToViewController
 
+- (void)dealloc
+{
+    NSLog(@"\n*** modal VC dealloc ***\n");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -32,9 +37,7 @@
 #pragma mark - Events
 - (void)dismissAction:(UIButton *)sender
 {
-    self.transition = [[FMPanModalTransition alloc] init];
-    self.transitioningDelegate = self.transition;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.transition dismissViewController:self animated:YES completion:nil];
 }
 
 #pragma mark - getter & setter
@@ -49,6 +52,42 @@
     }
     return _dismissBtn;
 }
+
+- (FMPanModalTransition *)transition
+{
+    if (!_transition) {
+        _transition = [FMPanModalTransition new];
+    }
+    return _transition;
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

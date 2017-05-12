@@ -11,7 +11,7 @@
 @interface FMPercentDrivenInteractiveTransition()
 
 @property (nonatomic, assign) BOOL shouldComplete;
-@property (nonatomic, strong) UIViewController *presentingVC;
+@property (nonatomic, strong) UIViewController *goalVC;
 
 @end
 
@@ -19,7 +19,7 @@
 
 - (void)wireToViewController:(UIViewController *)viewController
 {
-    self.presentingVC = viewController;
+    self.goalVC = viewController;
     [self prepareGestureRecognizerInView:viewController.view];
 }
 
@@ -42,7 +42,7 @@
         case UIGestureRecognizerStateBegan:
             // 1. Mark the interacting flag. Used when supplying it in delegate.
             self.interacting = YES;
-            [self.presentingVC dismissViewControllerAnimated:YES completion:nil];
+            [self.goalVC dismissViewControllerAnimated:YES completion:nil];
             break;
         case UIGestureRecognizerStateChanged: {
             // 2. Calculate the percentage of guesture

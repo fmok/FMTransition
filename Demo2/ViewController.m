@@ -85,7 +85,7 @@
 - (NSMutableArray *)typeArr
 {
     if (!_typeArr) {
-        _typeArr = [[NSMutableArray alloc] initWithObjects:@"ModalFromViewController", nil];
+        _typeArr = [[NSMutableArray alloc] initWithObjects:@"ModalFromViewController", @"NavFromViewController", nil];
     }
     return _typeArr;
 }

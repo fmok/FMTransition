@@ -18,11 +18,6 @@
 
 @implementation ModalFromViewController
 
-- (void)dealloc
-{
-    NSLog(@"\n*** present VC dealloc ***\n");
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -63,7 +58,10 @@
     return _transition;
 }
 
-
+- (void)dealloc
+{
+    NSLog(@"\n*** %@ ** %s ***\n", self.class, __func__);
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {

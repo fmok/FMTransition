@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A23AE1EC5530300C2F044 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A23AB1EC5530300C2F044 /* YYFPSLabel.m */; };
+		840A23AF1EC5530300C2F044 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A23AD1EC5530300C2F044 /* YYWeakProxy.m */; };
+		840A23B51EC559FD00C2F044 /* FMNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A23B41EC559FD00C2F044 /* FMNavgationController.m */; };
+		840A23B91EC55C0500C2F044 /* FMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A23B81EC55C0500C2F044 /* FMBaseViewController.m */; };
+		840A23BC1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 840A23BB1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.m */; };
 		841F61B11EC3FA50006AB7A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F61B01EC3FA50006AB7A6 /* main.m */; };
 		841F61B41EC3FA50006AB7A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F61B31EC3FA50006AB7A6 /* AppDelegate.m */; };
 		841F61B71EC3FA50006AB7A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F61B61EC3FA50006AB7A6 /* ViewController.m */; };
@@ -48,6 +53,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840A23AA1EC5530300C2F044 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		840A23AB1EC5530300C2F044 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		840A23AC1EC5530300C2F044 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		840A23AD1EC5530300C2F044 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		840A23B31EC559FD00C2F044 /* FMNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNavgationController.h; sourceTree = "<group>"; };
+		840A23B41EC559FD00C2F044 /* FMNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNavgationController.m; sourceTree = "<group>"; };
+		840A23B71EC55C0500C2F044 /* FMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseViewController.h; sourceTree = "<group>"; };
+		840A23B81EC55C0500C2F044 /* FMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseViewController.m; sourceTree = "<group>"; };
+		840A23BA1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		840A23BB1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
 		841F61AC1EC3FA50006AB7A6 /* Demo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841F61B01EC3FA50006AB7A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841F61B21EC3FA50006AB7A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +137,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840A23A91EC5530300C2F044 /* YYFPSLabel */ = {
+			isa = PBXGroup;
+			children = (
+				840A23AA1EC5530300C2F044 /* YYFPSLabel.h */,
+				840A23AB1EC5530300C2F044 /* YYFPSLabel.m */,
+				840A23AC1EC5530300C2F044 /* YYWeakProxy.h */,
+				840A23AD1EC5530300C2F044 /* YYWeakProxy.m */,
+			);
+			path = YYFPSLabel;
+			sourceTree = "<group>";
+		};
+		840A23B01EC559DE00C2F044 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				840A23B11EC559DE00C2F044 /* ViewController */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		840A23B11EC559DE00C2F044 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840A23B21EC559DE00C2F044 /* Navigation */,
+				840A23B71EC55C0500C2F044 /* FMBaseViewController.h */,
+				840A23B81EC55C0500C2F044 /* FMBaseViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		840A23B21EC559DE00C2F044 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				840A23B31EC559FD00C2F044 /* FMNavgationController.h */,
+				840A23B41EC559FD00C2F044 /* FMNavgationController.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		840A23B61EC55A4800C2F044 /* NavTransition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NavTransition;
+			sourceTree = "<group>";
+		};
 		841F61A31EC3FA50006AB7A6 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +206,7 @@
 		841F61AE1EC3FA50006AB7A6 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				840A23B01EC559DE00C2F044 /* Common */,
 				841F61ED1EC40BF3006AB7A6 /* Des */,
 				841F61E81EC3FDEB006AB7A6 /* Transition */,
 				841F620F1EC4120B006AB7A6 /* Classes */,
@@ -194,6 +255,8 @@
 			children = (
 				841F61E91EC3FE18006AB7A6 /* FMPanModalTransition.h */,
 				841F61EA1EC3FE18006AB7A6 /* FMPanModalTransition.m */,
+				840A23BA1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.h */,
+				840A23BB1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -201,6 +264,7 @@
 		841F61ED1EC40BF3006AB7A6 /* Des */ = {
 			isa = PBXGroup;
 			children = (
+				840A23A91EC5530300C2F044 /* YYFPSLabel */,
 				841F61EE1EC40BF4006AB7A6 /* Masonry */,
 			);
 			path = Des;
@@ -239,6 +303,7 @@
 		841F620F1EC4120B006AB7A6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				840A23B61EC55A4800C2F044 /* NavTransition */,
 				841F62101EC4120B006AB7A6 /* PanModelTransition */,
 			);
 			path = Classes;
@@ -394,18 +459,23 @@
 				841F62071EC40BF4006AB7A6 /* MASConstraint.m in Sources */,
 				841F620A1EC40BF4006AB7A6 /* MASViewAttribute.m in Sources */,
 				841F62131EC4125F006AB7A6 /* ModalToViewController.m in Sources */,
+				840A23AF1EC5530300C2F044 /* YYWeakProxy.m in Sources */,
 				841F620C1EC40BF4006AB7A6 /* NSArray+MASAdditions.m in Sources */,
+				840A23B51EC559FD00C2F044 /* FMNavgationController.m in Sources */,
 				841F62161EC412F4006AB7A6 /* ModalFromViewController.m in Sources */,
 				841F61B71EC3FA50006AB7A6 /* ViewController.m in Sources */,
 				841F620B1EC40BF4006AB7A6 /* MASViewConstraint.m in Sources */,
 				841F62091EC40BF4006AB7A6 /* MASLayoutConstraint.m in Sources */,
+				840A23B91EC55C0500C2F044 /* FMBaseViewController.m in Sources */,
 				841F61BD1EC3FA50006AB7A6 /* Demo2.xcdatamodeld in Sources */,
 				841F620E1EC40BF4006AB7A6 /* View+MASAdditions.m in Sources */,
 				841F62061EC40BF4006AB7A6 /* MASCompositeConstraint.m in Sources */,
 				841F620D1EC40BF4006AB7A6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				841F62081EC40BF4006AB7A6 /* MASConstraintMaker.m in Sources */,
+				840A23BC1EC561E300C2F044 /* FMPercentDrivenInteractiveTransition.m in Sources */,
 				841F61B41EC3FA50006AB7A6 /* AppDelegate.m in Sources */,
 				841F61B11EC3FA50006AB7A6 /* main.m in Sources */,
+				840A23AE1EC5530300C2F044 /* YYFPSLabel.m in Sources */,
 				841F61EB1EC3FE18006AB7A6 /* FMPanModalTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

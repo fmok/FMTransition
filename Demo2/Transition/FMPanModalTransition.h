@@ -8,18 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-//********************************************************************************************
-
-@interface FMPercentDrivenInteractiveTransition : UIPercentDrivenInteractiveTransition
-
-@property (nonatomic, assign) BOOL interacting;
-
-- (void)wireToViewController:(UIViewController * _Nullable)viewController;
-
-@end
-
-//********************************************************************************************
+#import "FMPercentDrivenInteractiveTransition.h"
 
 @interface FMPanModalTransition : NSObject<UIViewControllerAnimatedTransitioning,UIViewControllerTransitioningDelegate>
 

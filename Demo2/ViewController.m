@@ -90,6 +90,36 @@
     return _typeArr;
 }
 
+
+- (void)dealloc
+{
+    NSLog(@"\n*** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

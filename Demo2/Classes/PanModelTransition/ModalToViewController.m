@@ -17,11 +17,6 @@
 
 @implementation ModalToViewController
 
-- (void)dealloc
-{
-    NSLog(@"\n*** modal VC dealloc ***\n");
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -62,6 +57,10 @@
 }
 
 
+- (void)dealloc
+{
+    NSLog(@"\n*** %@ ** %s ***\n", self.class, __func__);
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -86,7 +85,6 @@
     [super viewDidDisappear:animated];
     NSLog(@"\n *** %@ ** %s ***\n", self.class, __func__);
 }
-
 
 
 - (void)didReceiveMemoryWarning {

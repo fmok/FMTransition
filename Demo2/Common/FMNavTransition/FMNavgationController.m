@@ -24,7 +24,7 @@ static NSString * PushSegueIdentifier = @"push segue identifier";
 @property (nonatomic, strong) FMPushInteractiveTransition *mPushTransition;
 @property (nonatomic, strong) FMPopInteractiveTransition *mPopTransition;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
-@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *mInteractiveTransition;
+@property (nonatomic, strong) FMPercentDrivenInteractiveTransition *mInteractiveTransition;
 @property (nonatomic, strong) UIViewController *popVC;
 
 @end
@@ -118,10 +118,10 @@ static NSString * PushSegueIdentifier = @"push segue identifier";
     return _mPopTransition;
 }
 
-- (UIPercentDrivenInteractiveTransition *)mInteractiveTransition
+- (FMPercentDrivenInteractiveTransition *)mInteractiveTransition
 {
     if (!_mInteractiveTransition) {
-        _mInteractiveTransition = [UIPercentDrivenInteractiveTransition new];
+        _mInteractiveTransition = [FMPercentDrivenInteractiveTransition new];
     }
     return _mInteractiveTransition;
 }

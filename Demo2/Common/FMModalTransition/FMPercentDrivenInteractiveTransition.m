@@ -11,7 +11,7 @@
 @interface FMPercentDrivenInteractiveTransition()
 
 @property (nonatomic, assign) BOOL shouldComplete;
-@property (nonatomic, strong) UIViewController *goalVC;
+@property (nonatomic, weak) UIViewController *goalVC;
 
 @end
 
